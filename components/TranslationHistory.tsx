@@ -17,7 +17,7 @@ async function TranslationHistory() {
   const url = `${
     process.env.NODE_ENV === "development" ? "http://localhost:3000" : vercelUrl
   }/translationHistory?userId=${userId}`;
-  console.log('url', url);
+  
   const response = await fetch(url, {
     next: {
       tags: ["translationHistory"],
