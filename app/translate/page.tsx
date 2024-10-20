@@ -32,6 +32,7 @@ async function TranslatePage() {
   );
 
   const languages = (await response.json()) as TranslationLanguages;
+  console.log("languages", languages);
 
   return (
     <div className="px-10 xl:px-0 mb-20">
