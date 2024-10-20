@@ -16,7 +16,7 @@ async function TranslationHistory() {
   const url = `${
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : process.env.VERCEL_URL
+      : "https://google-translate-clone-ashy.vercel.app"
   }/translationHistory?userId=${userId}`;
   console.log("url in TranslationHistory", url);
 
