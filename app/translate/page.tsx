@@ -15,7 +15,7 @@ export type TranslationLanguages = {
 
 async function TranslatePage() {
   auth().protect();
-
+  
   const { userId } = auth();
   if (!userId) {
     console.log("User not logged in");
@@ -32,7 +32,6 @@ async function TranslatePage() {
   );
 
   const languages = (await response.json()) as TranslationLanguages;
-  console.log("languages", languages);
 
   return (
     <div className="px-10 xl:px-0 mb-20">
