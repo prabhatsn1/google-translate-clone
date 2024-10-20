@@ -11,21 +11,18 @@ const getLanguage = (code: string) => {
 
 async function TranslationHistory() {
   const { userId } = auth();
-  console.log("in TranslationHistory", userId);
 
   const url = `${
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : "https://google-translate-clone-ashy.vercel.app"
+      : process.env.VERCEL_PROJECT_PRODUCTION_URL
   }/translationHistory?userId=${userId}`;
-  console.log("url in TranslationHistory", url);
 
   const response = await fetch(url, {
     next: {
       tags: ["translationHistory"],
     },
   });
-  console.log("response in TranslationHistory", response);
 
   const { translations }: { translations: Array<ITranslation> } =
     await response.json();
