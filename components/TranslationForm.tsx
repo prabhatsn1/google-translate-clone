@@ -62,6 +62,7 @@ function TranslationForm({ languages }: { languages: TranslationLanguages }) {
       method: "POST",
       body: formData,
     });
+    console.log("response in TranslationForm", response);
 
     const data = await response.json();
 
