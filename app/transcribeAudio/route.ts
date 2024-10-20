@@ -13,17 +13,19 @@ export async function POST(request: NextRequest) {
     process.env.AZURE_DEPLOYMENT_NAME === undefined
   ) {
     console.error("Azure credentials not set");
-    return {
-      sender: "",
-      response: "Azure credentials not set",
-    };
+    throw new Error("Azure credentials not set");
+    // return {
+    //   sender: "",
+    //   response: "Azure credentials not set",
+    // };
   }
 
   if (file.size === 0) {
-    return {
-      sender: "",
-      response: "No audio file provided",
-    };
+    throw new Error("No audio file provided");
+    // return {
+    //   sender: "",
+    //   response: "No audio file provided",
+    // };
   }
 
   const arrayBuffer = await file.arrayBuffer();
