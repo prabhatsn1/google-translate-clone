@@ -12,10 +12,10 @@ const getLanguage = (code: string) => {
 async function TranslationHistory() {
   const { userId } = auth();
 
+ const vercelUrl = `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+
   const url = `${
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000"
-      : process.env.VERCEL_PROJECT_PRODUCTION_URL
+    process.env.NODE_ENV === "development" ? "http://localhost:3000" : vercelUrl
   }/translationHistory?userId=${userId}`;
   console.log('url', url);
   const response = await fetch(url, {
