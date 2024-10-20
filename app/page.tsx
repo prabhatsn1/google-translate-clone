@@ -6,14 +6,7 @@ import Link from "next/link";
 
 export default async function Home() {
   const { userId } = auth();
-  console.log(
-    "Environment Variables: Vercel_url",
-    process.env.VERCEL_URL,
-    "VERCEL_BRANCH_URL",
-    process.env.VERCEL_BRANCH_URL,
-    "VERCEL_PROJECT_PRODUCTION_URL",
-    process.env.VERCEL_PROJECT_PRODUCTION_URL
-  );
+ 
   return (
     <main className="flex flex-col items-center justify-center p-10">
       <h1 className="text-3xl lg:text-6xl text-center  mb-3 font-light">
