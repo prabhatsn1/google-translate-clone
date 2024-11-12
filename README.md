@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Developed a language translation application that replicates the core functionalities of Google Translator using a modern tech stack. The project integrates Microsoft Azure for cloud infrastructure, Clerk for secure user authentication, and MongoDB with Mongoose for efficient database management. Leveraged OpenAI's language model to enhance translation accuracy and support nuanced language processing. Designed for a seamless user experience, allowing users to translate, detect, and interact with multilingual content in real-time.
 
 ## Getting Started
 
